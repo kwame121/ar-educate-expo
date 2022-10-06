@@ -24,7 +24,7 @@ const NavPill = ({selected,onclick}) => {
       const returnStyle = (selected) => {
         return({
             borderRadius:20,
-            backgroundColor:selected?'black':'#eaeced',
+            backgroundColor:selected?'#3282B8':'#eaeced',
             // width:'25%',
             alignItems:'center',
             padding:10
@@ -43,7 +43,7 @@ const NavPill = ({selected,onclick}) => {
     <View
     style={stylesheet.containerStyle}
     >
-        <TouchableOpacity onPress={()=>{onclick(0)}}>
+        <TouchableOpacity style={{width:'33%'}}  onPress={()=>{onclick(0)}}>
             <View  style={returnStyle(selected == 0)}>
                 <Text style={returnTextStyle(selected==0)}>
                     Description
@@ -51,7 +51,7 @@ const NavPill = ({selected,onclick}) => {
             </View>
         </TouchableOpacity>
        
-       <TouchableOpacity onPress={()=>{onclick(1)}}>
+       <TouchableOpacity style={{width:'33%'}} onPress={()=>{onclick(1)}}>
             <View style={returnStyle(selected == 1)}>
                 <Text style={returnTextStyle(selected==1)}>
                     Images
@@ -59,7 +59,7 @@ const NavPill = ({selected,onclick}) => {
             </View>
        </TouchableOpacity>
 
-       <TouchableOpacity onPress={()=>{onclick(2)}}>
+       <TouchableOpacity style={{width:'33%'}} onPress={()=>{onclick(2)}}>
             <View style={returnStyle(selected == 2)}>
                 <Text style={returnTextStyle(selected==2)}>
                     Video
@@ -67,13 +67,13 @@ const NavPill = ({selected,onclick}) => {
             </View>
        </TouchableOpacity>
         
-        <TouchableOpacity onPress={()=>{onclick(3)}}>
+        {/* <TouchableOpacity style={{width:'33%'}} onPress={()=>{onclick(3)}}>
             <View style={returnStyle(selected == 3)}>
                 <Text style={returnTextStyle(selected==3)}>
                     AR
                 </Text>
             </View>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         
     </View>
   )

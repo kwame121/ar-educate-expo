@@ -21,7 +21,7 @@ const ModuleResults = ({data,onclick}) => {
         return (
             <TouchableOpacity
                 onPress={()=>{
-                   console.log(item.id)
+                   onclick(item?.id)
                 }}
                 style={{width:'100%'}}
             >

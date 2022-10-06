@@ -44,7 +44,7 @@ const stylesheet = StyleSheet.create({
 });
 
 
-const Search = ({}) => {
+const Search = ({navigation}) => {
   const [showTitle,setShowTitle] = React.useState(true);
   const bounceAnim = React.useRef(new Animated.Value(0)).current;
   const opacityAnimation = React.useRef(new Animated.Value(1)).current;
@@ -169,6 +169,17 @@ const Search = ({}) => {
     }
    
   }, [showTitle]);
+
+  const handleBookNavigation = (id) => {
+
+    navigation.navigate('Details',{id:id});
+}
+
+const handleModuleNavigation = (id) => {
+    navigation.navigate('Module',{id:id});
+}
+
+
   return (
     <View style={stylesheet.container}>
         <Animated.View style={{padding:25,opacity:opacityAnimation,paddingBottom:0,transform:[{translateY:bounceAnim}]}}>
@@ -213,11 +224,11 @@ const Search = ({}) => {
                 
                 {
                   tabValue == 0 &&
-                  <BookResults  data = {searchResults}/>
+                  <BookResults onclick={handleBookNavigation}  data = {searchResults}/>
                 }
                 {
                   tabValue == 1 && 
-                  <ModuleResults data={moduleResults}/>
+                  <ModuleResults onclick={handleModuleNavigation} data={moduleResults}/>
                 } 
             </View>
         </Animated.View>

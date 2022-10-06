@@ -10,8 +10,13 @@ const TextView = ({textArray}) => {
   const stylesheet = StyleSheet.create({
     container:{
       width:'100%',
-      padding:25, 
-      paddingTop:0
+      // padding:25, 
+      paddingTop:0,
+      marginTop:10,
+      
+      // flexDirection:'column',
+      // flexGrow:1,
+      
     },
     textStyle:{
       fontSize:18,
@@ -22,9 +27,11 @@ const TextView = ({textArray}) => {
   })
   const text = returnDefault(textArray?.join("\r\n\r\n"));
   return (
-    <ScrollView style={stylesheet.container}>
-      <Text style={stylesheet.textStyle}>{text}</Text>
-    </ScrollView>
+       <ScrollView style={stylesheet.container}>
+        <Text style={stylesheet.textStyle}>{text}</Text>
+      </ScrollView>
+   
+   
   )
 }
 

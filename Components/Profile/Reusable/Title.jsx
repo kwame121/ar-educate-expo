@@ -3,11 +3,11 @@ import { StyleSheet, Text, View,FlatList ,Alert} from 'react-native';
 import { colorScheme } from '../../../Utils/constants';
 
 
-const Title = ({text,size}) => {
+const Title = ({text,size,fontWeight}) => {
     const style = StyleSheet.create({
         nameText: {
             fontSize:size?size:35,
-            fontWeight:'700',
+            fontWeight:fontWeight?fontWeight:'700',
             color:colorScheme?.light2
         },
         

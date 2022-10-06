@@ -97,7 +97,7 @@ const SplashScreen = ({navigation}) => {
             <View style={{marginBottom:20}}><Image style={{width:120,height:120}} source={require('../assets/images/mobile.png')}></Image></View>
             <Text style={styles.headerText}>Libr<Text style={{color:'#BBE1FA'}}>AR</Text>y</Text>
         </View>
-        <TouchableOpacity onPress={()=>{navigation.navigate('Library')}}>
+        <TouchableOpacity onPress={()=>{navigation.navigate('Main')}}>
             <View style={styles.getStartedBtn}>
                 <Text style={{fontSize:22,color:'#BBE1FA',fontWeight:'500'}}>
                     Get Started

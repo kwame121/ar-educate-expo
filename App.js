@@ -17,12 +17,13 @@ export default function App() {
     <NavigationContainer >
     <Stack.Navigator initialRouteName='Home'>
       <Stack.Screen name="Home" component={SplashScreen} options={{title:'',headerStyle:{backgroundColor:'#1B262C'}}} />
-      <Stack.Screen name="Library" component={Main} options ={{title:'',headerShadowVisible: false, 
+      <Stack.Screen name="Main" component={Main} options ={{title:'',headerShadowVisible: false, 
+      headerShown:false,
       headerBackTitleVisible: false, headerBackVisible:false, gestureEnabled:false, headerStyle:{backgroundColor:colorScheme.dark} }}   />
-      <Stack.Screen name="Details" component={Details} options ={{title:'',headerShadowVisible: false,
+      {/* <Stack.Screen name="Details" component={Details} options ={{title:'',headerShadowVisible: false,
       headerBackTitleVisible: false,}} />
-      <Stack.Screen name="Module" component={ModuleDetails} options ={{title:'Module Details',headerShadowVisible: false,
-      headerBackTitleVisible: false,}} />
+      <Stack.Screen name="Module" component={ModuleDetails} options ={{title:'Module Details',headerShadowVisible: true,
+      headerBackTitleVisible: false,}} /> */}
     </Stack.Navigator>
   </NavigationContainer>
   );

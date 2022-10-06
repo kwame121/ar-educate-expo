@@ -8,7 +8,7 @@ const style = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         padding:30,
-        paddingTop:30,
+        paddingTop:0,
         width:'100%',
         // justifyContent: 'center',
         display:'flex',
@@ -20,6 +20,7 @@ const style = StyleSheet.create({
 const Details = ({route,navigation}) => {
 
   const {id} = route.params;
+  console.log(id);
   const bookData = getData(id);
 
   

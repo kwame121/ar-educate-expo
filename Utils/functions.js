@@ -46,3 +46,30 @@ export const returnDefault = (value) =>
     }
     return value;
 }
+
+export const getBooksByCategory = (category) => 
+{
+    let books = bookList.filter((book)=>{
+        return book.category == category;
+    });
+
+    return books;
+
+}
+
+export const getModulesByCategory = (category) => 
+{
+    let lessonList = lessons.filter((lesson)=>{
+        return lesson.category == category;
+    });
+
+    return lessonList;
+
+}
+
+export const getFeaturedLessons = () => {
+    const shuffled = lessons.sort(() => 0.5 - Math.random());
+    // Get sub-array of first n elements after shuffled
+    let selected = shuffled.slice(0, 3);
+    return selected;
+}
